@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+
+  {% include meta.html %}
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/style.css" />
+
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}"
+    href="{{ site.baseurl }}/feed.xml" />
+</head>
+
+<body>
+  <div class="ui secondary pointing menu">
+    <a class="active header item" href="{{ site.baseurl }}/">{{ site.name }}</a>
+    <div class="right menu">
+      <a class="item" href="https://github.com/{{ site.footer-links.github }}"><i class="github icon"></i></a>
+      <a class="item" href="{{ site.baseurl }}/feed.xml"><i class="rss icon"></i></a>
+    </div>
+  </div>
+
+  <div class="ui container">
+		<div class="ui equal width stackable grid">
+			<div class="three wide column">
+				<div class="ui relaxed divided list">
+					{% for post in site.posts %}
+					<a href="{{ site.baseurl }}{{ post.url }}" class="item">
+						<i class="file alternate outline icon"></i>
+						<div class="content">
+							<div class="header">{{ post.title }}</div>
+							{% if post.subtitle %} <div class="description">{{ post.subtitle }}</div> {% endif %}
+						</div>
+					</a>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="column">
+				{{ content }}
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
