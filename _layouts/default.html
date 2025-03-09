@@ -1,46 +1,90 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
 
-<head>
-  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+    {% include meta.html %}
 
-  {% include meta.html %}
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/@stackoverflow/stacks/dist/js/stacks.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/page.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/style.css" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="{{ site.name }} - {{ site.description }}"
+      href="{{ site.baseurl }}/feed.xml"
+    />
+  </head>
 
-  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}"
-    href="{{ site.baseurl }}/feed.xml" />
-</head>
+  <body>
+    <header class="s-topbar ps-fixed print:d-none">
+      <a href="#content" class="s-topbar--skip-link">Skip to main content</a>
+      <div class="s-topbar--container">
+        <a href="#" class="s-topbar--menu-btn d-none md:d-flex js-hamburger-btn"><span></span></a>
+        <a href="{{ site.baseurl }}/" class="s-topbar--logo">
+          <img src="{{ site.github.owner_gravatar_url }}" />
+        </a>
+        <nav class="s-topbar--navigation" aria-label="notifications, help, and network">
+          <ol class="s-topbar--content">
+            <li>
+              <a
+                href="https://github.com/{{ site.footer-links.github }}"
+                class="s-topbar--item"
+                aria-label="GitHub"
+              >
+                <ion-icon class="header-icon" name="logo-github"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="{{ site.baseurl }}/feed.xml" class="s-topbar--item" aria-label="RSS Feed">
+                <ion-icon class="header-icon" name="logo-rss"></ion-icon>
+              </a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </header>
 
-<body>
-  <div class="ui secondary pointing menu">
-    <a class="active header item" href="{{ site.baseurl }}/">{{ site.name }}</a>
-    <div class="right menu">
-      <a class="item" href="https://github.com/{{ site.footer-links.github }}"><i class="github icon"></i></a>
-      <a class="item" href="{{ site.baseurl }}/feed.xml"><i class="rss icon"></i></a>
+    <div class="d-flex mx-auto w100 wmx12">
+      <div class="flex--item fl-shrink0 ws2 md:w-auto md:d-none print:d-none js-navigation">
+        <div
+          class="overflow-y-scroll overflow-x-hidden bg-white z-nav py12 fs-body1 ps-fixed ws2 t64 b0 px8 sm:w100 stacks-navigation-shadow"
+        >
+          <nav class="s-sidebarwidget">
+            <h2 class="s-sidebarwidget--header">Posts</h2>
+            <ul class="s-sidebarwidget--content s-sidebarwidget__items">
+            {% for post in site.posts %}
+            {% if post.url == page.url %}
+              <li class="s-sidebarwidget--item" aria-current="page">
+            {% else %}
+              <li class="s-sidebarwidget--item">
+            {% endif %}
+                <a
+                  class="s-navigation--item"
+                  href="{{ site.baseurl }}{{ post.url }}"
+                  title="{{ post.subtitle }}"
+                >
+                  {{ post.title }}
+                </a>
+              </li>
+            {% endfor %}
+            </ul>
+        </div>
+      </div>
+      <main
+        id="content"
+        class="d-flex fl-grow1 ps-relative t24 pt64 pb24 pl48 md:pl24 sm:pl16 sm:pr16"
+      >
+        {{ content }}
+      </main>
     </div>
-  </div>
 
-  <div class="ui container">
-		<div class="ui equal width stackable grid">
-			<div class="three wide column">
-				<div class="ui relaxed divided list">
-					{% for post in site.posts %}
-					<a href="{{ site.baseurl }}{{ post.url }}" class="item">
-						<i class="file alternate outline icon"></i>
-						<div class="content">
-							<div class="header">{{ post.title }}</div>
-							{% if post.subtitle %} <div class="description">{{ post.subtitle }}</div> {% endif %}
-						</div>
-					</a>
-					{% endfor %}
-				</div>
-			</div>
-			<div class="column">
-				{{ content }}
-			</div>
-		</div>
-	</div>
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
 </html>
