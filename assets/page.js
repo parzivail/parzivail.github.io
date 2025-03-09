@@ -26,6 +26,8 @@ $(document).ready(function () {
     function () {
       let headerText = $(this).text();
       let headerId = $(this).attr("id") || `header-${Math.random().toString(36)}`;
+      if (headerId == "comments") return;
+
       let headerTag = $(this).prop("tagName").toLowerCase(); // Get the tag name (h1, h2, etc.)
 
       let newStructure = $(`
@@ -43,4 +45,57 @@ $(document).ready(function () {
       $(this).replaceWith(newStructure);
     }
   );
+
+  // Create a sections sidebar
+  let toc = $("<ol></ol>");
+  let headerStack = [{ level: 0, list: toc }]; // Stack to track header levels and lists
+
+  $(".s-prose h1, .s-prose h2, .s-prose h3, .s-prose h4, .s-prose h5, .s-prose h6").each(
+    function () {
+      let headerText = $(this).text();
+      let headerId = $(this).attr("id");
+
+      if (!headerId) return;
+
+      let headerLevel = parseInt(this.tagName.substring(1));
+      let listItem = $("<li></li>").append(`<a href="#${headerId}">${headerText}</a>`);
+
+      // Find the right place in the hierarchy
+      while (headerStack.length > 1 && headerStack[headerStack.length - 1].level >= headerLevel) {
+        headerStack.pop(); // Move up the stack if necessary
+      }
+
+      let parentList = headerStack[headerStack.length - 1].list;
+      let newSubList = $("<ol></ol>");
+
+      parentList.append(listItem);
+      listItem.append(newSubList);
+
+      // Push the new sublist onto the stack
+      headerStack.push({ level: headerLevel, list: newSubList });
+    }
+  );
+
+  $("#toc-container").append(toc);
+
+  const anchors = $("body").find(
+    ".s-prose h1, .s-prose h2, .s-prose h3, .s-prose h4, .s-prose h5, .s-prose h6"
+  );
+
+  $(window).scroll(function () {
+    var scrollTop = $(document).scrollTop();
+
+    // highlight the last scrolled-to: set everything inactive first
+    for (var i = 0; i < anchors.length; i++) {
+      $('nav ol li a[href="#' + $(anchors[i]).attr("id") + '"]').removeClass("scroll-anchored");
+    }
+
+    // then iterate backwards, on the first match highlight it and break
+    for (var i = anchors.length - 1; i >= 0; i--) {
+      if (scrollTop > $(anchors[i]).offset().top - 5) {
+        $('nav ol li a[href="#' + $(anchors[i]).attr("id") + '"]').addClass("scroll-anchored");
+        break;
+      }
+    }
+  });
 });

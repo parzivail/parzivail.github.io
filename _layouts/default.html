@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/@stackoverflow/stacks/dist/js/stacks.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/stacks.min.js"></script>
     <script src="{{ site.baseurl }}/assets/page.js"></script>
 
     <link
@@ -26,7 +26,7 @@
         <a href="{{ site.baseurl }}/" class="s-topbar--logo">
           <img src="{{ site.github.owner_gravatar_url }}" />
         </a>
-        <nav class="s-topbar--navigation" aria-label="notifications, help, and network">
+        <nav class="s-topbar--navigation" aria-label="GitHub and RSS feed">
           <ol class="s-topbar--content">
             <li>
               <a
@@ -50,7 +50,7 @@
     <div class="d-flex mx-auto w100 wmx12">
       <div class="flex--item fl-shrink0 ws2 md:w-auto md:d-none print:d-none js-navigation">
         <div
-          class="overflow-y-scroll overflow-x-hidden bg-white z-nav py12 fs-body1 ps-fixed ws2 t64 b0 px8 sm:w100 stacks-navigation-shadow"
+          class="overflow-y-auto overflow-x-hidden bg-white z-nav py12 fs-body1 ps-fixed ws2 t64 b0 pr8 pl24 sm:w100 stacks-navigation-shadow"
         >
           <nav class="s-sidebarwidget">
             <h2 class="s-sidebarwidget--header">Posts</h2>
@@ -82,7 +82,7 @@
       </div>
       <main
         id="content"
-        class="d-flex fl-grow1 ps-relative t24 pt64 pb24 pl48 md:pl24 sm:pl16 sm:pr16"
+        class="d-flex fl-grow1 ps-relative t24 pt64 pb24 pl24 pr24 md:pl24 sm:pl16 sm:pr16"
       >
         {{ content }}
       </main>

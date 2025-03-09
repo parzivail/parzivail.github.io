@@ -3,11 +3,18 @@ layout: default
 published: true
 ---
 
-<!-- <div class="flex--item order-last ml32 sm:d-none print:d-none" style="width: 14rem">
+{% if page.nosections == false or page.nosections == nil %}
+<div class="flex--item order-last ml32 sm:d-none print:d-none" style="width: 14rem">
   <div class="ps-fixed t64 b0 py12 overflow-y-auto" style="width: 14rem">
-    Sidebar Widget
+    <h5 class="mt16 mb8 fw-bold tt-uppercase fs-fine fc-black-400 mnl1">Sections</h5>
+    <nav
+      id="toc-container"
+      aria-label="Table of contents"
+      class="toc s-anchors s-anchors__muted"
+    ></nav>
   </div>
-</div> -->
+</div>
+{% endif %}
 <div class="flex--item fl-grow1 ws1">
   <div class="content-card">
     <div class="title">
@@ -42,6 +49,27 @@ published: true
         </div>
       </div>
     </div>
-    <div class="body s-prose">{{ content }}</div>
+    <div class="body s-prose">
+      {{ content }}
+      <hr />
+      <h1 id="comments" class="comments-header">Comments</h1>
+      <script
+        src="https://giscus.app/client.js"
+        data-repo="parzivail/parzivail.github.io"
+        data-repo-id="R_kgDOOFYCQQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOOFYCQc4Cnv7a"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async
+      ></script>
+    </div>
   </div>
 </div>

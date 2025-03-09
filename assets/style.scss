@@ -378,29 +378,35 @@ p > a[href*="github.com/parzivail/"]::after {
 .stacks-h1,
 .stacks-h2,
 .stacks-h3,
-.stacks-h4 {
+.stacks-h4,
+.stacks-h5,
+.stacks-h6 {
   margin-bottom: 0;
   font-weight: 700;
   line-height: var(--lh-sm);
   color: var(--fc-dark);
   text-rendering: optimizeLegibility;
+  padding-top: calc(var(--su64));
+  margin-top: calc((var(--su64)) * -1);
 }
 .stacks-h1 {
   font-size: var(--fs-display1);
 }
 .stacks-h2 {
   font-size: var(--fs-headline1);
-  padding-top: calc(var(--su96) - var(--su8));
-  margin-top: calc((var(--su96) - var(--su8)) * -1);
 }
 .stacks-h3 {
   font-size: var(--fs-subheading);
   color: var(--fc-medium);
-  padding-top: calc(var(--su96) - var(--su8));
-  margin-top: calc((var(--su96) - var(--su8)) * -1);
 }
 .stacks-h4 {
   font-size: var(--fs-body3);
+  color: var(--fc-light);
+}
+.stacks-h5 {
+  color: var(--fc-light);
+}
+.stacks-h6 {
   color: var(--fc-light);
 }
 
@@ -427,4 +433,57 @@ p > a[href*="github.com/parzivail/"]::after {
 
 .stacks-header .link-icon {
   font-size: 18px;
+}
+
+.toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.toc a {
+  transition: padding-left 64ms ease-out;
+}
+
+.toc a.scroll-anchored {
+  border-left: 3px solid var(--theme-secondary-400);
+  padding-left: 4px;
+  font-weight: 600;
+}
+
+.toc ol li {
+  margin-bottom: var(--su8) !important;
+}
+
+.toc ol li a {
+  display: block !important;
+  font-size: var(--fs-body1) !important;
+  line-height: var(--lh-sm) !important;
+  padding-top: var(--su2) !important;
+  padding-bottom: var(--su2) !important;
+}
+
+.toc ol ol {
+  padding-top: var(--su6) !important;
+}
+
+.toc ol ol li {
+  padding: var(--su2) !important;
+  padding-left: var(--su12) !important;
+  margin-bottom: var(--su0) !important;
+}
+
+.comments-header:not(:focus) {
+  border: 0;
+  clip: rect(var(--su-static1), var(--su-static1), var(--su-static1), var(--su-static1));
+  clip-path: inset(50%);
+  height: var(--su-static1);
+  margin: calc(var(--su-static1) * -1);
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: var(--su-static1);
+  overflow-wrap: normal;
 }
