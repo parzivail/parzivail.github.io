@@ -2,21 +2,45 @@
 layout: default
 ---
 
-<div class="ui fluid card">
-  <div class="content">
-    <a class="ui right corner label" href="{{ site.github.repository_url }}/edit/gh-pages/{{ page.relative_path }}">
-      <i class="edit outline icon"></i>
-    </a>
-    <div class="header">{{ page.title }}</div>
-    <div class="meta">
+<!-- <div class="flex--item order-last ml32 sm:d-none print:d-none" style="width: 14rem">
+  <div class="ps-fixed t64 b0 py12 overflow-y-auto" style="width: 14rem">
+    Sidebar Widget
+  </div>
+</div> -->
+<div class="flex--item fl-grow1 ws1">
+  <div class="content-card">
+    <div class="title">
+      <div class="s-post-summary s-post-summary__minimal">
+        <div class="s-post-summary--content">
+          <h2 class="s-post-summary--content-title">{{ page.title }}</h2>
+          <div class="s-post-summary--meta">
+            {% if page.subtitle %}
+            <div class="s-post-summary--meta-tags">{{ page.subtitle }}</div>
+            {% endif %}
+            <div class="s-user-card s-user-card__minimal">
+              <a
+                href="https://github.com/{{ site.footer-links.github }}"
+                class="s-avatar s-user-card--avatar"
+              >
+                <img class="s-avatar--image" src="{{ site.github.owner_gravatar_url }}" />
+              </a>
+              <a href="https://github.com/{{ site.footer-links.github }}" class="s-user-card--link">
+                {{ site.github.owner_name }}
+              </a>
+              <time class="s-user-card--time">
+                posted {% include date.html date=page.date format="%B %o, %Y" %}
+              </time>
+            </div>
+          </div>
+          <a
+            href="{{ site.github.repository_url }}/blob/main/{{ page.relative_path }}"
+            class="s-btn s-btn__muted s-post-summary--content-menu-button"
+          >
+            <ion-icon name="create-outline"></ion-icon>
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="content">
-    {{ content }}
-  </div>
-  <div class="extra content">
-    <a class="right floated author" href="{{ site.github.owner_url }}">
-      <img class="ui avatar image" src="{{ site.github.owner_gravatar_url }}"> {{ site.github.owner_name }}
-    </a>
+    <div class="body s-prose">{{ content }}</div>
   </div>
 </div>

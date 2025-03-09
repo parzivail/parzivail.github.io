@@ -13,26 +13,14 @@ published: true
     <div class="title">
       <div class="s-post-summary s-post-summary__minimal">
         <div class="s-post-summary--content">
-          <h2 class="s-post-summary--content-title">{{ page.title }}</h2>
+          {% if page.subtitle %}
+          <div class="s-post-summary--meta-tags">{{ page.subtitle }}</div>
+          {% endif %}
           <div class="s-post-summary--meta">
             <div class="s-post-summary--meta-tags">{{ page.subtitle }}</div>
-            <div class="s-user-card s-user-card__minimal">
-              <a
-                href="https://github.com/{{ site.footer-links.github }}"
-                class="s-avatar s-user-card--avatar"
-              >
-                <img class="s-avatar--image" src="{{ site.github.owner_gravatar_url }}" />
-              </a>
-              <a href="https://github.com/{{ site.footer-links.github }}" class="s-user-card--link">
-                {{ site.github.owner_name }}
-              </a>
-              <time class="s-user-card--time">
-                posted {% include date.html date=page.date format="%B %o, %Y" %}
-              </time>
-            </div>
           </div>
           <a
-            href="{{ site.github.repository_url }}/blob/gh-pages/{{ page.relative_path }}"
+            href="{{ site.github.repository_url }}/blob/main/{{ page.relative_path }}"
             class="s-btn s-btn__muted s-post-summary--content-menu-button"
           >
             <ion-icon name="create-outline"></ion-icon>
