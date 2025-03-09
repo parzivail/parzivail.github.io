@@ -55,12 +55,11 @@
           <nav class="s-sidebarwidget">
             <h2 class="s-sidebarwidget--header">Posts</h2>
             <ul class="s-sidebarwidget--content s-sidebarwidget__items">
-            {% for post in site.posts %}
-            {% if post.url == page.url %}
-              <li class="s-sidebarwidget--item" aria-current="page">
-            {% else %}
+              {% for post in site.posts %} {% if post.url == page.url %}
+              <li class="s-sidebarwidget--item" aria-current="page">{% else %}</li>
+
               <li class="s-sidebarwidget--item">
-            {% endif %}
+                {% endif %}
                 <a
                   class="s-navigation--item"
                   href="{{ site.baseurl }}{{ post.url }}"
@@ -69,8 +68,9 @@
                   {{ post.title }}
                 </a>
               </li>
-            {% endfor %}
+              {% endfor %}
             </ul>
+          </nav>
         </div>
       </div>
       <main
