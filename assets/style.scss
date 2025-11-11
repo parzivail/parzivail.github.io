@@ -2,12 +2,12 @@
 ---
 
 body {
-  --theme-base-primary-color-h: 222;
-  --theme-base-primary-color-s: 100%;
-  --theme-base-primary-color-l: 51%;
-  --theme-base-secondary-color-h: 140;
-  --theme-base-secondary-color-s: 65%;
-  --theme-base-secondary-color-l: 29%;
+	--theme-base-primary-color-h: 222;
+	--theme-base-primary-color-s: 100%;
+	--theme-base-primary-color-l: 51%;
+	--theme-base-secondary-color-h: 140;
+	--theme-base-secondary-color-s: 65%;
+	--theme-base-secondary-color-l: 29%;
 }
 
 @import "stacks.css";
@@ -15,29 +15,29 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 @font-face {
-  font-family: Icons;
-  src: url(fonts/icons.eot);
-  src: url(fonts/icons.eot?#iefix) format("embedded-opentype"),
-    url(fonts/icons.woff2) format("woff2"), url(fonts/icons.woff) format("woff"),
-    url(fonts/icons.ttf) format("truetype"), url(fonts/icons.svg#icons) format("svg");
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-decoration: inherit;
-  text-transform: none;
+	font-family: Icons;
+	src: url(fonts/icons.eot);
+	src: url(fonts/icons.eot?#iefix) format("embedded-opentype"),
+		url(fonts/icons.woff2) format("woff2"), url(fonts/icons.woff) format("woff"),
+		url(fonts/icons.ttf) format("truetype"), url(fonts/icons.svg#icons) format("svg");
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-decoration: inherit;
+	text-transform: none;
 }
 
 @font-face {
-  font-family: brand-icons;
-  src: url(fonts/brand-icons.eot);
-  src: url(fonts/brand-icons.eot?#iefix) format("embedded-opentype"),
-    url(fonts/brand-icons.woff2) format("woff2"), url(fonts/brand-icons.woff) format("woff"),
-    url(fonts/brand-icons.ttf) format("truetype"), url(fonts/brand-icons.svg#icons) format("svg");
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-decoration: inherit;
-  text-transform: none;
+	font-family: brand-icons;
+	src: url(fonts/brand-icons.eot);
+	src: url(fonts/brand-icons.eot?#iefix) format("embedded-opentype"),
+		url(fonts/brand-icons.woff2) format("woff2"), url(fonts/brand-icons.woff) format("woff"),
+		url(fonts/brand-icons.ttf) format("truetype"), url(fonts/brand-icons.svg#icons) format("svg");
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-decoration: inherit;
+	text-transform: none;
 }
 
 /*
@@ -45,264 +45,264 @@ body {
 	Source: https://github.com/richleland/pygments-css/blob/master/default.css
 */
 .highlight .hll {
-  background-color: #ffffcc;
+	background-color: #ffffcc;
 }
 .highlight {
-  background: #f8f8f8;
-  margin: unset;
-  padding: 5px;
-  border-radius: 10px;
+	background: #f8f8f8;
+	margin: unset;
+	padding: 5px;
+	border-radius: 10px;
 }
 .highlight .c {
-  color: #408080;
-  font-style: italic;
+	color: #408080;
+	font-style: italic;
 } /* Comment */
 .highlight .err {
-  border: 1px solid #ff0000;
+	border: 1px solid #ff0000;
 } /* Error */
 .highlight .k {
-  color: #008000;
-  font-weight: bold;
+	color: #008000;
+	font-weight: bold;
 } /* Keyword */
 .highlight .o {
-  color: #666666;
+	color: #666666;
 } /* Operator */
 .highlight .ch {
-  color: #408080;
-  font-style: italic;
+	color: #408080;
+	font-style: italic;
 } /* Comment.Hashbang */
 .highlight .cm {
-  color: #408080;
-  font-style: italic;
+	color: #408080;
+	font-style: italic;
 } /* Comment.Multiline */
 .highlight .cp {
-  color: #bc7a00;
+	color: #bc7a00;
 } /* Comment.Preproc */
 .highlight .cpf {
-  color: #408080;
-  font-style: italic;
+	color: #408080;
+	font-style: italic;
 } /* Comment.PreprocFile */
 .highlight .c1 {
-  color: #408080;
-  font-style: italic;
+	color: #408080;
+	font-style: italic;
 } /* Comment.Single */
 .highlight .cs {
-  color: #408080;
-  font-style: italic;
+	color: #408080;
+	font-style: italic;
 } /* Comment.Special */
 .highlight .gd {
-  color: #a00000;
+	color: #a00000;
 } /* Generic.Deleted */
 .highlight .ge {
-  font-style: italic;
+	font-style: italic;
 } /* Generic.Emph */
 .highlight .gr {
-  color: #ff0000;
+	color: #ff0000;
 } /* Generic.Error */
 .highlight .gh {
-  color: #000080;
-  font-weight: bold;
+	color: #000080;
+	font-weight: bold;
 } /* Generic.Heading */
 .highlight .gi {
-  color: #00a000;
+	color: #00a000;
 } /* Generic.Inserted */
 .highlight .go {
-  color: #888888;
+	color: #888888;
 } /* Generic.Output */
 .highlight .gp {
-  color: #000080;
-  font-weight: bold;
+	color: #000080;
+	font-weight: bold;
 } /* Generic.Prompt */
 .highlight .gs {
-  font-weight: bold;
+	font-weight: bold;
 } /* Generic.Strong */
 .highlight .gu {
-  color: #800080;
-  font-weight: bold;
+	color: #800080;
+	font-weight: bold;
 } /* Generic.Subheading */
 .highlight .gt {
-  color: #0044dd;
+	color: #0044dd;
 } /* Generic.Traceback */
 .highlight .kc {
-  color: #008000;
-  font-weight: bold;
+	color: #008000;
+	font-weight: bold;
 } /* Keyword.Constant */
 .highlight .kd {
-  color: #008000;
-  font-weight: bold;
+	color: #008000;
+	font-weight: bold;
 } /* Keyword.Declaration */
 .highlight .kn {
-  color: #008000;
-  font-weight: bold;
+	color: #008000;
+	font-weight: bold;
 } /* Keyword.Namespace */
 .highlight .kp {
-  color: #008000;
+	color: #008000;
 } /* Keyword.Pseudo */
 .highlight .kr {
-  color: #008000;
-  font-weight: bold;
+	color: #008000;
+	font-weight: bold;
 } /* Keyword.Reserved */
 .highlight .kt {
-  color: #b00040;
+	color: #b00040;
 } /* Keyword.Type */
 .highlight .m {
-  color: #666666;
+	color: #666666;
 } /* Literal.Number */
 .highlight .s {
-  color: #ba2121;
+	color: #ba2121;
 } /* Literal.String */
 .highlight .na {
-  color: #7d9029;
+	color: #7d9029;
 } /* Name.Attribute */
 .highlight .nb {
-  color: #008000;
+	color: #008000;
 } /* Name.Builtin */
 .highlight .nc {
-  color: #0000ff;
-  font-weight: bold;
+	color: #0000ff;
+	font-weight: bold;
 } /* Name.Class */
 .highlight .no {
-  color: #880000;
+	color: #880000;
 } /* Name.Constant */
 .highlight .nd {
-  color: #aa22ff;
+	color: #aa22ff;
 } /* Name.Decorator */
 .highlight .ni {
-  color: #999999;
-  font-weight: bold;
+	color: #999999;
+	font-weight: bold;
 } /* Name.Entity */
 .highlight .ne {
-  color: #d2413a;
-  font-weight: bold;
+	color: #d2413a;
+	font-weight: bold;
 } /* Name.Exception */
 .highlight .nf {
-  color: #0000ff;
+	color: #0000ff;
 } /* Name.Function */
 .highlight .nl {
-  color: #a0a000;
+	color: #a0a000;
 } /* Name.Label */
 .highlight .nn {
-  color: #0000ff;
-  font-weight: bold;
+	color: #0000ff;
+	font-weight: bold;
 } /* Name.Namespace */
 .highlight .nt {
-  color: #008000;
-  font-weight: bold;
+	color: #008000;
+	font-weight: bold;
 } /* Name.Tag */
 .highlight .nv {
-  color: #19177c;
+	color: #19177c;
 } /* Name.Variable */
 .highlight .ow {
-  color: #aa22ff;
-  font-weight: bold;
+	color: #aa22ff;
+	font-weight: bold;
 } /* Operator.Word */
 .highlight .w {
-  color: #bbbbbb;
+	color: #bbbbbb;
 } /* Text.Whitespace */
 .highlight .mb {
-  color: #666666;
+	color: #666666;
 } /* Literal.Number.Bin */
 .highlight .mf {
-  color: #666666;
+	color: #666666;
 } /* Literal.Number.Float */
 .highlight .mh {
-  color: #666666;
+	color: #666666;
 } /* Literal.Number.Hex */
 .highlight .mi {
-  color: #666666;
+	color: #666666;
 } /* Literal.Number.Integer */
 .highlight .mo {
-  color: #666666;
+	color: #666666;
 } /* Literal.Number.Oct */
 .highlight .sa {
-  color: #ba2121;
+	color: #ba2121;
 } /* Literal.String.Affix */
 .highlight .sb {
-  color: #ba2121;
+	color: #ba2121;
 } /* Literal.String.Backtick */
 .highlight .sc {
-  color: #ba2121;
+	color: #ba2121;
 } /* Literal.String.Char */
 .highlight .dl {
-  color: #ba2121;
+	color: #ba2121;
 } /* Literal.String.Delimiter */
 .highlight .sd {
-  color: #ba2121;
-  font-style: italic;
+	color: #ba2121;
+	font-style: italic;
 } /* Literal.String.Doc */
 .highlight .s2 {
-  color: #ba2121;
+	color: #ba2121;
 } /* Literal.String.Double */
 .highlight .se {
-  color: #bb6622;
-  font-weight: bold;
+	color: #bb6622;
+	font-weight: bold;
 } /* Literal.String.Escape */
 .highlight .sh {
-  color: #ba2121;
+	color: #ba2121;
 } /* Literal.String.Heredoc */
 .highlight .si {
-  color: #bb6688;
-  font-weight: bold;
+	color: #bb6688;
+	font-weight: bold;
 } /* Literal.String.Interpol */
 .highlight .sx {
-  color: #008000;
+	color: #008000;
 } /* Literal.String.Other */
 .highlight .sr {
-  color: #bb6688;
+	color: #bb6688;
 } /* Literal.String.Regex */
 .highlight .s1 {
-  color: #ba2121;
+	color: #ba2121;
 } /* Literal.String.Single */
 .highlight .ss {
-  color: #19177c;
+	color: #19177c;
 } /* Literal.String.Symbol */
 .highlight .bp {
-  color: #008000;
+	color: #008000;
 } /* Name.Builtin.Pseudo */
 .highlight .fm {
-  color: #0000ff;
+	color: #0000ff;
 } /* Name.Function.Magic */
 .highlight .vc {
-  color: #19177c;
+	color: #19177c;
 } /* Name.Variable.Class */
 .highlight .vg {
-  color: #19177c;
+	color: #19177c;
 } /* Name.Variable.Global */
 .highlight .vi {
-  color: #19177c;
+	color: #19177c;
 } /* Name.Variable.Instance */
 .highlight .vm {
-  color: #19177c;
+	color: #19177c;
 } /* Name.Variable.Magic */
 .highlight .il {
-  color: #666666;
+	color: #666666;
 } /* Literal.Number.Integer.Long */
 
 /*
 	Allow scrolling in code blocks
 */
 pre.highlight {
-  overflow: auto;
+	overflow: auto;
 }
 
 div.highlight {
-  margin-bottom: 1em;
+	margin-bottom: 1em;
 }
 
 /*
 	Set code block font and prevent ligatures
 */
 code {
-  font-variant-ligatures: none;
-  font-feature-settings: "liga" 0;
-  font-display: swap;
+	font-variant-ligatures: none;
+	font-feature-settings: "liga" 0;
+	font-display: swap;
 }
 
 /*
 	One tab is four spaces
 */
 html {
-  tab-size: 4;
+	tab-size: 4;
 }
 
 /*
@@ -310,70 +310,90 @@ html {
 */
 a[href*="//"]:not([href*="parzivail.github.io"]):not([href*="github.com/parzivail"]):after
 {
-  font-family: Icons;
-  content: "\f35d";
-  font-size: 60%;
-  color: #ccc;
-  padding-left: 4px;
-  font-weight: normal;
-  vertical-align: text-top;
+	font-family: Icons;
+	content: "\f0c1";
+	font-size: 60%;
+	color: #ccc;
+	padding-left: 4px;
+	font-weight: normal;
+	vertical-align: text-top;
 }
 
 /*
 	Add badges to personal GitHub links
 */
 p > a[href*="github.com/parzivail/"]::after {
-  font-family: brand-icons;
-  content: "\f09b";
-  font-size: 80%;
-  color: #ccc;
-  padding-left: 3px;
-  font-weight: normal;
-  vertical-align: text-top;
+	font-family: brand-icons;
+	content: "\f09b";
+	font-size: 80%;
+	color: #ccc;
+	padding-left: 3px;
+	font-weight: normal;
+	vertical-align: text-top;
+}
+
+li > a[href*="github.com/parzivail/"]::after {
+	font-family: brand-icons;
+	content: "\f09b";
+	font-size: 80%;
+	color: #ccc;
+	padding-left: 3px;
+	font-weight: normal;
+	vertical-align: text-top;
+}
+
+.color-pip {
+	display: inline-block;
+	border: 1px solid black;
+	border-radius: 3px;
+	line-height: 1em;
+	box-sizing: border-box;
+	height: 0.75em;
+	width: 0.75em;
 }
 
 .s-topbar--logo > img {
-  height: calc(var(--_tb-h) * 0.8);
-  border-radius: calc(var(--_tb-h) * 0.1);
+	height: calc(var(--_tb-h) * 0.8);
+	border-radius: calc(var(--_tb-h) * 0.1);
 }
 
 .header-icon {
-  font-size: 20px;
+	font-size: 20px;
 }
 
 .s-post-summary .s-post-summary--content-menu-button {
-  right: 0;
-  top: 0;
-  font-size: 18px;
+	right: 0;
+	top: 0;
+	font-size: 18px;
 }
 
 .content-card {
-  margin-bottom: var(--su48);
-  border-radius: var(--br-md);
-  box-shadow: var(--bs-sm);
+	margin-bottom: var(--su48);
+	border-radius: var(--br-md);
+	box-shadow: var(--bs-sm);
 }
 
 .content-card > .title {
-  border-radius: var(--br-md) var(--br-md) 0 0;
-  border: 1px solid var(--bc-medium);
-  background-color: var(--highlight-bg);
-  margin: 0;
-  overflow: auto;
-  padding: var(--su12);
+	border-radius: var(--br-md) var(--br-md) 0 0;
+	border: 1px solid var(--bc-medium);
+	background-color: var(--highlight-bg);
+	margin: 0;
+	overflow: auto;
+	padding: var(--su12);
 }
 
 .content-card > .body {
-  padding: var(--su16);
-  border-bottom-left-radius: var(--br-md);
-  border-bottom-right-radius: var(--br-md);
-  border: 1px solid var(--bc-medium);
-  border-top-width: 0;
+	padding: var(--su16);
+	border-bottom-left-radius: var(--br-md);
+	border-bottom-right-radius: var(--br-md);
+	border: 1px solid var(--bc-medium);
+	border-top-width: 0;
 }
 
 .stacks-title {
-  text-shadow: 0 0 10px var(--theme-primary-400), 0 0 10px var(--theme-primary-400),
-    0 0 10px var(--theme-primary-400);
-  text-rendering: optimizeLegibility;
+	text-shadow: 0 0 10px var(--theme-primary-400), 0 0 10px var(--theme-primary-400),
+		0 0 10px var(--theme-primary-400);
+	text-rendering: optimizeLegibility;
 }
 .stacks-h1,
 .stacks-h2,
@@ -381,41 +401,41 @@ p > a[href*="github.com/parzivail/"]::after {
 .stacks-h4,
 .stacks-h5,
 .stacks-h6 {
-  margin-bottom: 0;
-  font-weight: 700;
-  line-height: var(--lh-sm);
-  color: var(--fc-dark);
-  text-rendering: optimizeLegibility;
-  padding-top: calc(var(--su64));
-  margin-top: calc((var(--su64)) * -1);
+	margin-bottom: 0;
+	font-weight: 700;
+	line-height: var(--lh-sm);
+	color: var(--fc-dark);
+	text-rendering: optimizeLegibility;
+	padding-top: calc(var(--su64));
+	margin-top: calc((var(--su64)) * -1);
 }
 .stacks-h1 {
-  font-size: var(--fs-display1);
+	font-size: var(--fs-display1);
 }
 .stacks-h2 {
-  font-size: var(--fs-headline1);
+	font-size: var(--fs-headline1);
 }
 .stacks-h3 {
-  font-size: var(--fs-subheading);
-  color: var(--fc-medium);
+	font-size: var(--fs-subheading);
+	color: var(--fc-medium);
 }
 .stacks-h4 {
-  font-size: var(--fs-body3);
-  color: var(--fc-light);
+	font-size: var(--fs-body3);
+	color: var(--fc-light);
 }
 .stacks-h5 {
-  color: var(--fc-light);
+	color: var(--fc-light);
 }
 .stacks-h6 {
-  color: var(--fc-light);
+	color: var(--fc-light);
 }
 
 .s-post-summary {
-  padding: var(--su8);
+	padding: var(--su8);
 }
 
 .s-post-summary .s-post-summary--content-title {
-  font-size: var(--fs-headline1);
+	font-size: var(--fs-headline1);
 }
 
 .s-prose h1,
@@ -424,66 +444,66 @@ p > a[href*="github.com/parzivail/"]::after {
 .s-prose h4,
 .s-prose h5,
 .s-prose h6 {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .s-prose .stacks-header {
-  margin-bottom: 0.7em;
+	margin-bottom: 0.7em;
 }
 
 .stacks-header .link-icon {
-  font-size: 18px;
+	font-size: 18px;
 }
 
 .toc ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex !important;
-  flex-direction: column !important;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex !important;
+	flex-direction: column !important;
 }
 
 .toc a {
-  transition: padding-left 64ms ease-out;
+	transition: padding-left 64ms ease-out;
 }
 
 .toc a.scroll-anchored {
-  border-left: 3px solid var(--theme-secondary-400);
-  padding-left: 4px;
-  font-weight: 600;
+	border-left: 3px solid var(--theme-secondary-400);
+	padding-left: 4px;
+	font-weight: 600;
 }
 
 .toc ol li {
-  margin-bottom: var(--su8) !important;
+	margin-bottom: var(--su8) !important;
 }
 
 .toc ol li a {
-  display: block !important;
-  font-size: var(--fs-body1) !important;
-  line-height: var(--lh-sm) !important;
-  padding-top: var(--su2) !important;
-  padding-bottom: var(--su2) !important;
+	display: block !important;
+	font-size: var(--fs-body1) !important;
+	line-height: var(--lh-sm) !important;
+	padding-top: var(--su2) !important;
+	padding-bottom: var(--su2) !important;
 }
 
 .toc ol ol {
-  padding-top: var(--su6) !important;
+	padding-top: var(--su6) !important;
 }
 
 .toc ol ol li {
-  padding: var(--su2) !important;
-  padding-left: var(--su12) !important;
-  margin-bottom: var(--su0) !important;
+	padding: var(--su2) !important;
+	padding-left: var(--su12) !important;
+	margin-bottom: var(--su0) !important;
 }
 
 .comments-header:not(:focus) {
-  border: 0;
-  clip: rect(var(--su-static1), var(--su-static1), var(--su-static1), var(--su-static1));
-  clip-path: inset(50%);
-  height: var(--su-static1);
-  margin: calc(var(--su-static1) * -1);
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: var(--su-static1);
-  overflow-wrap: normal;
+	border: 0;
+	clip: rect(var(--su-static1), var(--su-static1), var(--su-static1), var(--su-static1));
+	clip-path: inset(50%);
+	height: var(--su-static1);
+	margin: calc(var(--su-static1) * -1);
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: var(--su-static1);
+	overflow-wrap: normal;
 }
