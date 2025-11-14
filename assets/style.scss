@@ -3,7 +3,7 @@
 
 body {
 	--theme-base-primary-color-h: 222;
-	--theme-base-primary-color-s: 100%;
+	--theme-base-primary-color-s: 80%;
 	--theme-base-primary-color-l: 51%;
 	--theme-base-secondary-color-h: 140;
 	--theme-base-secondary-color-s: 65%;
@@ -48,7 +48,6 @@ body {
 	background-color: #ffffcc;
 }
 .highlight {
-	background: #f8f8f8;
 	margin: unset;
 	padding: 5px;
 	border-radius: 10px;
@@ -308,7 +307,7 @@ html {
 /*
 	Add badges to outbound links
 */
-a[href*="//"]:not([href*="parzivail.github.io"]):not([href*="github.com/parzivail"]):after
+.s-prose a[href*="//"]:not(.image-link):not([href*="parzivail.github.io"]):not([href*="github.com/parzivail/"]):not([href*="wikipedia.org/wiki/"]):after
 {
 	font-family: Icons;
 	content: "\f0c1";
@@ -320,9 +319,23 @@ a[href*="//"]:not([href*="parzivail.github.io"]):not([href*="github.com/parzivai
 }
 
 /*
+	Add badges to Wikipedia linka
+*/
+.s-prose a[href*="wikipedia.org/wiki/"]::after {
+	font-family: brand-icons;
+	content: "\f266";
+	font-size: 80%;
+	color: #ccc;
+	padding-left: 3px;
+	font-weight: normal;
+	vertical-align: text-top;
+}
+
+/*
 	Add badges to personal GitHub links
 */
-p > a[href*="github.com/parzivail/"]::after {
+.s-prose a[href*="github.com/parzivail/"]::after,
+.s-prose a[href*="parzivail.github.io/"]::after {
 	font-family: brand-icons;
 	content: "\f09b";
 	font-size: 80%;
@@ -332,14 +345,9 @@ p > a[href*="github.com/parzivail/"]::after {
 	vertical-align: text-top;
 }
 
-li > a[href*="github.com/parzivail/"]::after {
-	font-family: brand-icons;
-	content: "\f09b";
-	font-size: 80%;
-	color: #ccc;
-	padding-left: 3px;
-	font-weight: normal;
-	vertical-align: text-top;
+.s-prose .image-link {
+	display: flex;
+	justify-content: center;
 }
 
 .color-pip {
