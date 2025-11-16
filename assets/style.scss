@@ -350,6 +350,10 @@ html {
 	justify-content: center;
 }
 
+.s-prose .image-link img {
+	border-radius: var(--br-md);
+}
+
 .color-pip {
 	display: inline-block;
 	border: 1px solid black;
