@@ -347,11 +347,42 @@ html {
 
 .s-prose .image-link {
 	display: flex;
-	justify-content: center;
+	position: relative;
+	margin: 0 auto;
+	width: fit-content;
 }
 
 .s-prose .image-link img {
 	border-radius: var(--br-md);
+}
+
+.s-prose .image-link img {
+	border-radius: var(--br-md);
+}
+
+.s-prose a[href$=".pdf"].image-link::after {
+	--f: 10px; /* fold width */
+	--r: 8px; /* notch depth */
+
+	content: "PDF";
+
+	position: absolute;
+	top: 10px;
+	right: calc(-1 * var(--f));
+	padding-inline: 10px;
+	background: var(--theme-primary);
+	color: #fff;
+	border-bottom: var(--f) solid #0005;
+	border-left: var(--r) solid #0000;
+	clip-path: polygon(
+		0 0,
+		100% 0,
+		100% calc(100% - var(--f)),
+		calc(100% - var(--f)) 100%,
+		calc(100% - var(--f)) calc(100% - var(--f)),
+		0 calc(100% - var(--f)),
+		var(--r) calc(50% - var(--f) / 2)
+	);
 }
 
 .color-pip {

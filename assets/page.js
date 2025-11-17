@@ -35,19 +35,32 @@ $(document).ready(function () {
 	});
 
 	// Wrap all auto-generated images with links to open them in a new tab
-	$(".s-prose img").wrap(function () {
-		return $("<a>", {
-			href: this.src,
-			class: "image-link",
-			target: "_blank",
-		});
+	$(".s-prose img").each(function () {
+		var $img = $(this);
+
+		// Check if image is already inside a link
+		var $parentLink = $img.closest("a");
+
+		if ($parentLink.length) {
+			// Add class to existing link
+			$parentLink.addClass("image-link");
+		} else {
+			// Wrap image in a new link to itself
+			$img.wrap(
+				$("<a>", {
+					href: $img.attr("src"),
+					target: "_blank",
+					class: "image-link",
+				})
+			);
+		}
 	});
 
 	// Wrap auto-generated header blocks in a block that gives them a permalink anchor
 	$(".s-prose h1, .s-prose h2, .s-prose h3, .s-prose h4, .s-prose h5, .s-prose h6").each(
 		function () {
 			let headerText = $(this).text();
-			let headerId = $(this).attr("id") || `header-${Math.random().toString(36)}`;
+			let headerId = $(this).attr("id");
 			if (headerId == "comments") return;
 
 			let headerTag = $(this).prop("tagName").toLowerCase(); // Get the tag name (h1, h2, etc.)
