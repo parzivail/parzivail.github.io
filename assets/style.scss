@@ -366,6 +366,7 @@ html {
 
 	content: "PDF";
 
+	text-indent: 0;
 	position: absolute;
 	top: 10px;
 	right: calc(-1 * var(--f));
@@ -479,6 +480,12 @@ html {
 
 .s-post-summary .s-post-summary--content-title {
 	font-size: var(--fs-headline1);
+}
+
+.s-prose p {
+	text-indent: 2em;
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 .s-prose h1,

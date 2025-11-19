@@ -43,7 +43,7 @@ $(document).ready(function () {
 
 		if ($parentLink.length) {
 			// Add class to existing link
-			$parentLink.addClass("image-link");
+			$parentLink.addClass("image-link").prop("target", "_blank");
 		} else {
 			// Wrap image in a new link to itself
 			$img.wrap(
